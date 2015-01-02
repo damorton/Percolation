@@ -1,4 +1,4 @@
-#.gitignore for Collinear Points
+#.gitignore for Percolation
 bin/
 .settings/
 .project
