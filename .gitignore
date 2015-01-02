@@ -1,0 +1,5 @@
+#.gitignore for Collinear Points
+bin/
+.settings/
+.project
+.classpath
