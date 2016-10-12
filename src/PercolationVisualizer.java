@@ -19,6 +19,8 @@
 
 import java.awt.Font;
 
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
 
 public class PercolationVisualizer {
@@ -83,7 +85,6 @@ public class PercolationVisualizer {
                 Percolation perc = new Percolation(N);
                 draw(perc, N, numberOfOpenSites);
                 while (!perc.percolates()) {
-                    StdDraw.show(0);
                     int randRow = StdRandom.uniform(N);
                     int randCol = StdRandom.uniform(N);
                     if (!perc.isOpen(randRow, randCol)) {
@@ -91,8 +92,6 @@ public class PercolationVisualizer {
                         numberOfOpenSites++;
                     }
                     draw(perc, N, numberOfOpenSites);
-                    StdDraw.show(1);
-
                 }
                 numberOfOpenSites = 0;
             }
@@ -113,7 +112,6 @@ public class PercolationVisualizer {
             draw(perc, N, numberOfOpenSites);
 
             while (!in.isEmpty()) {
-                StdDraw.show(0); // turn on animation mode
                 int i = in.readInt(); // row
                 int j = in.readInt(); // column
 
@@ -122,7 +120,6 @@ public class PercolationVisualizer {
                     numberOfOpenSites++;
                 }
                 draw(perc, N, numberOfOpenSites);
-                StdDraw.show(1);
             }
 
         }
